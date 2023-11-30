@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.player{
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.hp-bar{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.473);
+
+}
+
+.arena-wrapper {
+
+
+  margin: 20px auto;
+
+
+  display: grid;
+  grid-template-areas:
+    "player arena enemy"
+    "ui ui ui";
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
+}
+.arena {
+  grid-area: arena;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  
+}
+.round{
+  text-shadow: 1px 1px 3px #000;
+  margin-top: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 20px;
+}
+.round::before{
+  content: 'Round:';
+}
+.player-wrapper {
+
+  grid-area: player;
+}
+.enemy-wrapper {
+  grid-area: enemy;
+}
+
+.ui{
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  grid-area: ui;
+  height: 100px;
+  background-color: aquamarine;
+  width: 100%;
+}
